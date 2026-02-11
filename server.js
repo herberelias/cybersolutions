@@ -18,9 +18,11 @@ app.use(morgan('dev'));
 // Rutas
 const authRoutes = require('./routes/auth');
 const phishingRoutes = require('./routes/phishing');
+const quizRoutes = require('./routes/quiz');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/phishing', phishingRoutes);
+app.use('/api/quiz', quizRoutes);
 
 // Ruta base
 app.get('/', (req, res) => {
