@@ -17,7 +17,10 @@ app.use(morgan('dev'));
 
 // Rutas
 const authRoutes = require('./routes/auth');
+const phishingRoutes = require('./routes/phishing');
+
 app.use('/api/auth', authRoutes);
+app.use('/api/phishing', phishingRoutes);
 
 // Ruta base
 app.get('/', (req, res) => {
